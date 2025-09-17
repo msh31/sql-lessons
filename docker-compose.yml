@@ -1,0 +1,12 @@
+services:
+  db:
+    container_name: sql-lessen-db
+    image: mariadb:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: webshop # from the book
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+    ports:
+      - "9906:3306"
